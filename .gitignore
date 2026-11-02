@@ -1,0 +1,18 @@
+# Local settings and generated files
+settings.json
+position.json
+work/
+dist/
+*.log
+*.zip
+*.lnk
+
+# Never publish credentials or Codex state
+.env
+.env.*
+.codex/
+auth.json
+*credentials*
+*secrets*
+*.pem
+*.key

@@ -1,0 +1,14 @@
+name: Windows layout checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  layouts:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run offline WPF checks
+        shell: powershell
+        run: powershell.exe -NoProfile -STA -ExecutionPolicy Bypass -File .\Widget.ps1 -UiTest
